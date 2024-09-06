@@ -13,12 +13,14 @@ import {
 import { Button } from "../ui/button";
 import GlobalApi from "../../../service/GlobalApi";
 import { useUser } from "@clerk/clerk-react";
+import { useNavigate } from "react-router";
 
 function AddResume() {
   const [openDialog, setOpenDialog] = useState(false);
   const [resumeTitle, setResumeTitle] = useState("");
   const [loading, setLoading] = useState(false);
   const {user} = useUser();
+  const navigate = useNavigate();
 
   const onCreate = async () => {
     setLoading(true);
@@ -35,7 +37,9 @@ function AddResume() {
 
     GlobalApi.createNewResume(data)
     .then((res) => {
-      console.log(res);
+      console.log(res.data.data.documentId);
+      setLoading(false);
+      navigate('/dashboard/resume/'+res.data.data.documentId+'/edit');
     })
     .catch((err) => {
         console.log(err);
@@ -52,7 +56,7 @@ function AddResume() {
     <div>
       <div
         onClick={() => setOpenDialog(true)}
-        className="p-14 py-24 border-2 border-gray-600 items-center flex justify-center hover:scale-105 transition-all hover:shadow-md cursor-pointer border-dashed bg-secondary rounded-lg mt-10 h-[280px]"
+        className="p-14 py-24 border-2 border-gray-600 items-center flex justify-center hover:scale-105 transition-all hover:shadow-md cursor-pointer border-dashed bg-secondary rounded-lg h-[280px]"
       >
         <PlusSquare></PlusSquare>
       </div>

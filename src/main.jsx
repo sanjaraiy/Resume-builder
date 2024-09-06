@@ -4,9 +4,10 @@ import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './home/Home.jsx'
-import Dashboard from './dashboard/Dashboard.jsx'
+import Dashboard from './dashboard/index.jsx'
 import { ClerkProvider } from '@clerk/clerk-react'
 import SignInPage from './auth/signIn/SignInPage.jsx'
+import EditResume from './dashboard/resume/[resumeId]/index.jsx'
 
 // Import your publishable key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <Dashboard></Dashboard>
+      },
+      {
+        path: '/dashboard/resume/:resumeId/edit',
+        element: <EditResume></EditResume>
       }
     ]
   },
