@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import PersonalDetails from './preview/PersonalDetails';
 import SummaryDetails from './preview/SummaryDetails';
 import ProfessionalExpDetails from './preview/ProfessionalExpDetails';
+import EducationDetails from './preview/EducationDetails';
 
 function ResumePreview() {
 
@@ -15,12 +16,16 @@ function ResumePreview() {
     >
         {/* Personal Detail */}
          <PersonalDetails resumeInfo={resumeInfo}></PersonalDetails>
+
         {/* Summary  */}
          <SummaryDetails resumeInfo={resumeInfo}></SummaryDetails>
+        
         {/* Professional Experience  */}
          <ProfessionalExpDetails resumeInfo={resumeInfo}></ProfessionalExpDetails>
+        
         {/* Education  */}
-
+        <EducationDetails resumeInfo={resumeInfo}></EducationDetails>
+        
         {/* Skills  */}
     </div>
   )
