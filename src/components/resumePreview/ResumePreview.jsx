@@ -4,6 +4,7 @@ import PersonalDetails from './preview/PersonalDetails';
 import SummaryDetails from './preview/SummaryDetails';
 import ProfessionalExpDetails from './preview/ProfessionalExpDetails';
 import EducationDetails from './preview/EducationDetails';
+import SkillsDetails from './preview/SkillsDetails';
 
 function ResumePreview() {
 
@@ -27,6 +28,7 @@ function ResumePreview() {
         <EducationDetails resumeInfo={resumeInfo}></EducationDetails>
         
         {/* Skills  */}
+        <SkillsDetails resumeInfo={resumeInfo}></SkillsDetails>
     </div>
   )
 }
