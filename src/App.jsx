@@ -1,6 +1,6 @@
 import { useUser } from "@clerk/clerk-react";
 import { Navigate, Outlet } from "react-router-dom"
-import Header from "./components/Header/Header";
+import Header from "./components/header/Header";
 
 
 function App() {
