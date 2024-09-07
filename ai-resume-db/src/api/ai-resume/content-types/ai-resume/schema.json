@@ -24,6 +24,24 @@
     },
     "userName": {
       "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
     }
   }
 }

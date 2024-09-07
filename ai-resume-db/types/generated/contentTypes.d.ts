@@ -16,6 +16,12 @@ export interface ApiAiResumeAiResume extends Struct.CollectionTypeSchema {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     resumeId: Schema.Attribute.String;
     userName: Schema.Attribute.String;
+    address: Schema.Attribute.String;
+    firstName: Schema.Attribute.String;
+    lastName: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    jobTitle: Schema.Attribute.String;
+    email: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

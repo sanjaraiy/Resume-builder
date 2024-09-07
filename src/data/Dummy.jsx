@@ -1,7 +1,7 @@
 export default {
     firstName: 'Sanjay',
     lastName: 'Rai',
-    jobTitle: 'Software Engineer |||',
+    jobTitle: 'Software Engineer - lll',
     address: 'Pilibangan City, Rajasthan, India, 335803',
     phone: '(+91) 9351646145',
     email: 'sanjayrai33724@gmail.com',
