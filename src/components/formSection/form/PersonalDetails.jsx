@@ -37,12 +37,14 @@ function PersonalDetails({enabledNext}) {
     const onSave = (e) => {
        e.preventDefault();
        setLoading(true);
+
        const data={
-        data:formData
+         data:formData
        }
+
        GlobalApi.updateResumes(params?.resumeId, data)
        .then((res) => {
-         console.log(res.data);
+         console.log(res);
          toast('Details updated..!!')
        })
        .catch((err) => {

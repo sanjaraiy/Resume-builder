@@ -39,21 +39,22 @@ function FormSection() {
       </div>
 
 
-      {/* Personal Detail */}
-      {activeFormIndex == 1 ? <PersonalDetails enabledNext={(v) => setEnabledNext(v)}></PersonalDetails> : null}
+      
+      {
+        activeFormIndex == 1 ? <PersonalDetails enabledNext={(v) => setEnabledNext(v)}></PersonalDetails> 
+        : activeFormIndex == 2 ?  <SummaryDetails enabledNext={(v) => setEnabledNext(v)}></SummaryDetails>   
+        : activeFormIndex == 3 ? <Experience enabledNext={(v) => setEnabledNext(v)}></Experience>
+        : activeFormIndex == 4 ? <EducationalDetails enabledNext={(v) => setEnabledNext(v)}></EducationalDetails>
+        : activeFormIndex == 5 ? <Skills enabledNext={(v) => setEnabledNext(v)}></Skills>
+        : null
+      }
       
 
-      {/* Summary  */}
-      <SummaryDetails></SummaryDetails>
+      
 
-      {/* Experience  */}
-      <Experience></Experience>
+     
 
-      {/* Educational Detail  */}
-      <EducationalDetails></EducationalDetails>
-
-      {/* Skills  */}
-      <Skills></Skills>
+     
     </div>
   );
 }

@@ -14,7 +14,7 @@ const createNewResume = async (data) => await axiosCient.post('/ai-resumes', dat
 
 const getUserResumes = async (userEmail) => await axiosCient.get(`/ai-resumes?filters[userEmail][$eq]=${userEmail}`)
 
-const updateResumes = async (id, data) => await axiosCient.put('/ai-resumes/'+id, data);
+const updateResumes = async (id, data) => await axiosCient.put(`ai-resumes/${id}`, data);
 
 export default {
     createNewResume,

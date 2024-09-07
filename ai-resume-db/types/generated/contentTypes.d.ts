@@ -22,6 +22,7 @@ export interface ApiAiResumeAiResume extends Struct.CollectionTypeSchema {
     phone: Schema.Attribute.String;
     jobTitle: Schema.Attribute.String;
     email: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
