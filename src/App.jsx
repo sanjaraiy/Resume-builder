@@ -1,7 +1,7 @@
 import { useUser } from "@clerk/clerk-react";
 import { Navigate, Outlet } from "react-router-dom"
 import Header from "./components/header/Header";
-
+import { Toaster } from "@/components/ui/sonner"
 
 function App() {
  
@@ -16,6 +16,7 @@ function App() {
     <>
       <Header></Header>
       <Outlet></Outlet>
+      <Toaster />
     </>
   )
 }
